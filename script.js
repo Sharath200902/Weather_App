@@ -13,8 +13,6 @@ const getWeather = (city)=>{
     fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city='+city, options)
     .then(response => response.json())
     .then((response) => {
-
-
         var date1 = new Date((response.sunrise*1000));
         var date2 = new Date((response.sunset*1000));
 

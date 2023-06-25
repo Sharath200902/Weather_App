@@ -15,6 +15,9 @@ const getWeather = (city)=>{
     .then((response) => {
 
 
+        var date1 = new Date((response.sunrise*1000));
+        var date2 = new Date((response.sunset*1000));
+
         console.log(response)
 
         // cloud_pct.innerHTML = response.cloud_pct
@@ -28,8 +31,8 @@ const getWeather = (city)=>{
         wind_speed.innerHTML = response.wind_speed
         wind_speed2.innerHTML = response.wind_speed
         wind_degrees.innerHTML = response.wind_degrees
-        sunrise.innerHTML = response.sunrise
-        sunset.innerHTML = response.sunset
+        sunrise.innerHTML = date1
+        sunset.innerHTML = date2
 
     })
     .catch(err => console.error(err));

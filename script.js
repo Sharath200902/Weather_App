@@ -28,8 +28,8 @@ const getWeather = (city)=>{
         wind_speed.innerHTML = response.wind_speed
         wind_speed2.innerHTML = response.wind_speed
         wind_degrees.innerHTML = response.wind_degrees
-        sunrise.innerHTML = response.sunrise.toJSON()
-        sunset.innerHTML = response.sunset.toJSON()
+        sunrise.innerHTML = response.sunrise
+        sunset.innerHTML = response.sunset
 
     })
     .catch(err => console.error(err));
